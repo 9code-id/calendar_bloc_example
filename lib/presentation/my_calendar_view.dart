@@ -4,6 +4,7 @@ import 'package:calendar_bloc_example/core.dart';
 import 'package:calendar_bloc_example/global/datasource/syncfusion/syncfusion_calendar_event_datasource.dart';
 import 'package:calendar_bloc_example/model/calendar_event.dart';
 import 'package:calendar_bloc_example/presentation/my_calendar_cubit.dart';
+import 'package:calendar_bloc_example/presentation/my_calendar_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -35,8 +36,8 @@ class _MyCalendarViewState extends State<MyCalendarView> {
         ),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
-          onPressed: () {
-            //
+          onPressed: () async {
+            await Get.to(MyCalendarFormView());
           },
         ),
         body: BlocBuilder<MyCalendarCubit, MyCalendarState>(

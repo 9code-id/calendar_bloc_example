@@ -7,6 +7,8 @@ class CalendarEvent {
     required this.to,
     required this.color,
     required this.isAllDay,
+    this.pic,
+    this.location,
   });
 
   String eventName;
@@ -14,4 +16,7 @@ class CalendarEvent {
   DateTime to;
   Color color;
   bool isAllDay;
+
+  String? pic;
+  String? location;
 }

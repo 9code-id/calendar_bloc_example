@@ -28,4 +28,15 @@ class MyCalendarCubit extends Cubit<MyCalendarState> {
     );
     emit(newState);
   }
+
+  addEvent(CalendarEvent event) async {
+    print("addEvent...");
+    var events = state.events;
+    events.add(event);
+    var newState = MyCalendarState(
+      events: events,
+      selectedEvents: state.selectedEvents,
+    );
+    emit(newState);
+  }
 }
