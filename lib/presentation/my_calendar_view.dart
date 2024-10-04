@@ -58,7 +58,7 @@ class _MyCalendarViewState extends State<MyCalendarView> {
                         SyncfusionCalendarEventDataSource(cubit.state.events),
                     monthViewSettings: const MonthViewSettings(
                       appointmentDisplayMode:
-                          MonthAppointmentDisplayMode.indicator,
+                          MonthAppointmentDisplayMode.appointment,
                     ),
                     onTap: (CalendarTapDetails details) {
                       if (details.targetElement ==
@@ -67,6 +67,8 @@ class _MyCalendarViewState extends State<MyCalendarView> {
                             _getEventsForDate(details.date!));
                       }
                     },
+                    appointmentTextStyle: TextStyle(fontSize: 16.0),
+                    allowAppointmentResize: false,
                   ),
                 ),
                 Expanded(
