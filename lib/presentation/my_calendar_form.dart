@@ -51,7 +51,7 @@ class _MyCalendarFormViewState extends State<MyCalendarFormView> {
         location: location,
       ),
     );
-    Get.back();
+    Navigator.pop(context);
   }
 
   @override
