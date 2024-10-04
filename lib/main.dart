@@ -13,7 +13,7 @@ class CalendarApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Calendar Demo',
-      navigatorKey: Get.navigatorKey,
+      // navigatorKey: Get.navigatorKey,
       home: MyCalendarView(),
       debugShowCheckedModeBanner: false,
     );

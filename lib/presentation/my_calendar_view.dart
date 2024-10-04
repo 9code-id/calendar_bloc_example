@@ -37,7 +37,10 @@ class _MyCalendarViewState extends State<MyCalendarView> {
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
           onPressed: () async {
-            await Get.to(MyCalendarFormView());
+            await Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MyCalendarFormView()),
+            );
           },
         ),
         body: BlocBuilder<MyCalendarCubit, MyCalendarState>(
