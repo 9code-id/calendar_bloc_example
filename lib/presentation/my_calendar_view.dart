@@ -36,6 +36,8 @@ class _MyCalendarViewState extends State<MyCalendarView> {
         ),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
+          key: UniqueKey(),
+          heroTag: UniqueKey().toString(),
           onPressed: () async {
             await Navigator.push(
               context,
